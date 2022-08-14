@@ -16,7 +16,6 @@ class LoginPage(BasePage, Locators):
     def search_passwd_fild(self):
         return self.find_element(Locators.passwd_field_locator)
 
-
     def click_on_passwd_field(self):
         return self.search_passwd_fild().click()
 
