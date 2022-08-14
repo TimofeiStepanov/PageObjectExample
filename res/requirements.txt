@@ -1,5 +1,3 @@
 pytest
 selenium
 webdriver-manager
-selenium-page-objects
-selenium-page-factory
