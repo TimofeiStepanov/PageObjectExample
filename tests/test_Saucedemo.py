@@ -11,7 +11,7 @@ def test_username_field_is_present(webdriver_int):
     LoginPage(webdriver_int).search_username_fild()
 
 
-def test_username_field_is_clikabled(webdriver_int):
+def test_username_field_is_clickable(webdriver_int):
     LoginPage(webdriver_int).click_on_username_field()
 
 
@@ -22,7 +22,7 @@ def test_username_input(webdriver_int):
 def test_passwd_field_is_present(webdriver_int):
     LoginPage(webdriver_int).search_passwd_fild()
 
-def test_passwd_field_is_clikabled(webdriver_int):
+def test_passwd_field_is_clickable(webdriver_int):
     LoginPage(webdriver_int).click_on_passwd_field()
 
 def test_passwd_input(webdriver_int):
@@ -32,7 +32,7 @@ def test_passwd_input(webdriver_int):
 def test_submit_button(webdriver_int):
     LoginPage(webdriver_int).search_submit_button()
 
-def test_submit_button_is_clikabled(webdriver_int):
+def test_submit_button_is_clickable(webdriver_int):
     LoginPage(webdriver_int).click_on_submit_button()
 
 # def test_login_form(webdriver_int):
