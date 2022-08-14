@@ -1,6 +1,5 @@
 from src.locators.SaucedemoLocators import Locators
 from src.pages.BasePage import BasePage
-from selenium.webdriver.support import ui
 
 
 class LoginPage(BasePage, Locators):
@@ -24,8 +23,8 @@ class LoginPage(BasePage, Locators):
     def enter_passwd(self, value):
         return self.search_passwd_fild().send_keys(value)
 
-    def search_submit_dutton(self):
+    def search_submit_button(self):
         return self.find_element(Locators.submit_butt_locator)
 
     def click_on_submit_button(self):
-        return self.search_submit_dutton().click()
+        return self.search_submit_button().click()
