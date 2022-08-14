@@ -3,11 +3,10 @@ from src.pages.BasePage import BasePage
 from selenium.webdriver.support import ui
 
 
-class LoginPage(BasePage,Locators):
+class LoginPage(BasePage, Locators):
 
     def search_username_fild(self):
-        username_field = self.find_element(Locators.username_field_locator)
-        return username_field
+        return self.find_element(Locators.username_field_locator)
 
     def click_on_username_field(self):
         return self.search_username_fild().click()
@@ -16,8 +15,8 @@ class LoginPage(BasePage,Locators):
         return self.search_username_fild().send_keys(value)
 
     def search_passwd_fild(self):
-        passwd_field = self.find_element(Locators.passwd_field_locator)
-        return passwd_field
+        return self.find_element(Locators.passwd_field_locator)
+
 
     def click_on_passwd_field(self):
         return self.search_passwd_fild().click()
@@ -26,11 +25,7 @@ class LoginPage(BasePage,Locators):
         return self.search_passwd_fild().send_keys(value)
 
     def search_submit_dutton(self):
-        submit_button = self.find_element(Locators.submit_butt_locator)
-        return submit_button
+        return self.find_element(Locators.submit_butt_locator)
 
     def click_on_submit_button(self):
         return self.search_submit_dutton().click()
-
-
-
