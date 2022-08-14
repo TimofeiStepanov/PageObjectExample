@@ -13,17 +13,20 @@ class LoginPage(BasePage, Locators):
     def enter_username(self, value):
         return self.search_username_fild().send_keys(value)
 
-    def search_passwd_fild(self):
+    def search_passwd_field(self):
         return self.find_element(Locators.passwd_field_locator)
 
     def click_on_passwd_field(self):
-        return self.search_passwd_fild().click()
+        return self.search_passwd_field().click()
 
     def enter_passwd(self, value):
-        return self.search_passwd_fild().send_keys(value)
+        return self.search_passwd_field().send_keys(value)
 
     def search_submit_button(self):
         return self.find_element(Locators.submit_butt_locator)
 
     def click_on_submit_button(self):
         return self.search_submit_button().click()
+
+    def search_error_message_field(self):
+        return self.find_element(Locators.error_message_locator)
