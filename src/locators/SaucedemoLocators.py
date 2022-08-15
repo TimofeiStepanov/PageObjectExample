@@ -9,3 +9,5 @@ class Locators(object):
     passwd_field_locator = (By.ID, "password")
 # Submit button
     submit_butt_locator = (By.ID, "login-button")
+# Error message
+    error_message_locator = (By.XPATH, "//div[contains(@class,'error-message-container error')]")

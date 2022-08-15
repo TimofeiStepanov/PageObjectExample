@@ -4,7 +4,7 @@
         "binary_path": ".\\\\..\\\\res\\\\Drivers\\.wdm\\drivers\\edgedriver\\win64\\104.0.1293\\msedgedriver.exe"
     },
     "win64_geckodriver_0.31_for_103.0": {
-        "timestamp": "14/08/2022",
+        "timestamp": "15/08/2022",
         "binary_path": ".\\\\..\\\\res\\\\Drivers\\.wdm\\drivers\\geckodriver\\win64\\0.31\\geckodriver.exe"
     }
 }
