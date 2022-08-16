@@ -43,4 +43,4 @@ def webdriver_int(browser):
     driver.maximize_window()
     driver.implicitly_wait(10)
     yield driver
-    # driver.quit()
+    driver.quit()
