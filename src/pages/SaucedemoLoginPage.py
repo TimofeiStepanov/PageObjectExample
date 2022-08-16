@@ -30,3 +30,6 @@ class LoginPage(BasePage, Locators):
 
     def search_error_message_field(self):
         return self.find_element(Locators.error_message_locator)
+
+    def get_error_message_text(self):
+        return self.find_element(Locators.error_message_text_locator).text
