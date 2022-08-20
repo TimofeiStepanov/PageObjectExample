@@ -44,3 +44,9 @@ def webdriver_int(browser):
     driver.implicitly_wait(10)
     yield driver
     driver.quit()
+
+def pytest_configure(config):
+    config.addinivalue_line("markers", "smoky:")
+    config.addinivalue_line(
+        "markers", "functional:"
+    )
