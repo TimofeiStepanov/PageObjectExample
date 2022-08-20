@@ -11,6 +11,7 @@ from selenium.webdriver.edge.service import Service as EdgeService
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 
+# Setup commandline parameter for select browser
 def pytest_addoption(parser):
     parser.addoption(
         "--browser",
@@ -25,7 +26,7 @@ def pytest_addoption(parser):
 def browser(request):
     return request.config.getoption("--browser")
 
-
+# Setup webdriver for different browsers
 @pytest.fixture(scope="session")
 def webdriver_int(browser):
     if browser == "chrome":
@@ -45,8 +46,11 @@ def webdriver_int(browser):
     yield driver
     driver.quit()
 
+# Added marks for tests
 def pytest_configure(config):
-    config.addinivalue_line("markers", "smoky:")
+    config.addinivalue_line(
+        "markers", "smoky:"
+    )
     config.addinivalue_line(
         "markers", "functional:"
     )

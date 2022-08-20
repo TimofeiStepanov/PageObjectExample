@@ -178,19 +178,19 @@ def test_password_not_set_login(webdriver_int, password_not_set, input_credentia
 
 @pytest.mark.functional
 def test_username_and_password_not_set_login(webdriver_int, username_and_password_not_set, input_credentials):
-    assert LoginPage(webdriver_int).get_error_message_text() == "Epic sadface: Username is required"
+    assert LoginPage(webdriver_int).get_error_message_text() == "Epic sadface: Username abd password is required"
 
-
+# The error message should inform about which parameter is set incorrectly.
 @pytest.mark.functional
 def test_username_not_valid_set_login(webdriver_int, username_not_valid, input_credentials):
     assert LoginPage(
-        webdriver_int).get_error_message_text() == "Epic sadface: Username and password do not match any user in this service"
+        webdriver_int).get_error_message_text() == "Epic sadface: Username do not match any user in this service"
 
-
+# The error message should inform about which parameter is set incorrectly.
 @pytest.mark.functional
 def test_password_not_valid_set_login(webdriver_int, password_not_valid, input_credentials):
     assert LoginPage(
-        webdriver_int).get_error_message_text() == "Epic sadface: Username and password do not match any user in this service"
+        webdriver_int).get_error_message_text() == "Epic sadface: Password do not valid for this user"
 
 
 @pytest.mark.functional
